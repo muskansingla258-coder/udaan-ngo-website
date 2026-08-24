@@ -1,0 +1,365 @@
+/* ==========================================================================
+   GET INVOLVED PAGE STYLES (Person 3)
+   Syllabus Topics:
+   - Form layout, inputs, selects, textareas
+   - Progress bar styling
+   - Accordion animations
+   - Multi-column card grids
+   ========================================================================== */
+
+.get-involved-page {
+  width: 100%;
+}
+
+.gi-hero-section {
+  padding: 60px 0 40px;
+  background-color: var(--bg-page);
+}
+
+/* 2. TOP GRID */
+.gi-top-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .gi-top-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.volunteer-form-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 600px) {
+  .volunteer-form-card {
+    padding: 24px 18px;
+  }
+}
+
+.card-top-tag {
+  margin-bottom: 12px;
+}
+
+.volunteer-card-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.volunteer-card-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.volunteer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.volunteer-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.volunteer-form label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.volunteer-form input,
+.volunteer-form select,
+.volunteer-form textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.volunteer-form input:focus,
+.volunteer-form select:focus,
+.volunteer-form textarea:focus {
+  border-color: var(--primary-orange);
+}
+
+.btn-submit-volunteer {
+  align-self: flex-start;
+  padding: 12px 28px;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .btn-submit-volunteer {
+    width: 100%;
+  }
+}
+
+.volunteer-success-msg {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.volunteer-success-msg h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 12px 0 8px;
+}
+
+.volunteer-success-msg p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  margin-bottom: 20px;
+}
+
+.btn-reset-form {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+/* Right Column Cards */
+.gi-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mission-fund-card,
+.toolkit-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.gi-side-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.gi-side-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.monthly-goal-wrap {
+  margin-bottom: 24px;
+}
+
+.monthly-goal-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.goal-pct {
+  color: var(--primary-orange);
+}
+
+.goal-progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #f7ebd9;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.goal-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f5a623 0%, #e86014 100%);
+  border-radius: var(--radius-full);
+}
+
+.btn-full-width {
+  width: 100%;
+}
+
+.btn-toolkit {
+  border-color: #f5a623;
+  color: #1a1410;
+}
+
+.btn-toolkit:hover {
+  background-color: var(--accent-gold-light);
+}
+
+/* 3. CORPORATE PARTNERSHIPS BANNER */
+.corporate-banner {
+  background-color: #fdede2;
+  border-radius: var(--radius-lg);
+  padding: 40px 48px;
+  border: 1px solid #fed5be;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+}
+
+@media (max-width: 768px) {
+  .corporate-banner {
+    flex-direction: column;
+    padding: 28px 20px;
+    text-align: center;
+  }
+}
+
+.corporate-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.corporate-desc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  max-width: 580px;
+  line-height: 1.6;
+}
+
+.btn-partner {
+  padding: 14px 28px;
+  font-size: 0.95rem;
+}
+
+/* 4. FAQ LIST */
+.volunteer-faq-list {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.faq-item-card.open {
+  border-color: var(--primary-orange);
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  text-align: left;
+  background: transparent;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.faq-chevron {
+  color: var(--primary-orange);
+  padding: 4px;
+}
+
+.faq-answer-body {
+  padding: 0 24px 22px;
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
+}
+
+/* 5. CAREERS JOBS GRID */
+.jobs-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 860px) {
+  .jobs-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+.job-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-orange);
+}
+
+.job-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.job-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.job-summary {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.55;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.btn-job-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-orange);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.btn-job-details:hover {
+  transform: translateX(4px);
+}

@@ -1,0 +1,455 @@
+/* ==========================================================================
+   IMPACT PAGE STYLES (Person 3)
+   Syllabus Topics:
+   - Dynamic Bar chart calculations
+   - CSS Grid responsive layout
+   - Progress bar styling and status indicators
+   ========================================================================== */
+
+.impact-page {
+  width: 100%;
+}
+
+.impact-hero-section {
+  padding: 60px 0 40px;
+  background-color: var(--bg-page);
+}
+
+/* 2. TOP METRICS GRID */
+.top-metrics-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 860px) {
+  .top-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.metric-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 28px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metric-primary {
+  grid-row: span 2;
+}
+
+.metric-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.metric-card-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.metric-big-number {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--primary-orange);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.metric-medium-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1;
+  margin-top: auto;
+}
+
+.metric-medium-number.highlight-orange {
+  color: var(--primary-orange);
+}
+
+.metric-progress-wrapper {
+  margin-top: auto;
+}
+
+.metric-progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #faebd7;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.metric-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f5a623 0%, #e86014 100%);
+  border-radius: var(--radius-full);
+}
+
+.metric-progress-label {
+  display: block;
+  text-align: right;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.metric-icon-small {
+  margin-bottom: 12px;
+}
+
+/* Communities Card */
+.metric-communities-card {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .metric-communities-card {
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+  }
+}
+
+.metric-map-graphic {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  height: 140px;
+  border: 1px solid var(--border-light);
+}
+
+.regional-map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3. YEARLY GROWTH & DIRECT/INDIRECT IMPACT */
+.growth-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 860px) {
+  .growth-split-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.growth-chart-card,
+.ripple-impact-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 32px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.growth-section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.growth-section-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bar-year {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  width: 40px;
+}
+
+.bar-track {
+  flex: 1;
+  height: 16px;
+  background-color: #faebd7;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f5a623 0%, #e86014 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.8s ease-out;
+}
+
+.bar-value {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  width: 60px;
+  text-align: right;
+}
+
+/* Impact Types List */
+.impact-types-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.impact-type-box {
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.direct-impact-box {
+  border-color: #fbd3bc;
+  background-color: #fffaf6;
+}
+
+.indirect-impact-box {
+  border-color: #fedbb2;
+  background-color: #fffdf5;
+}
+
+.impact-type-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.impact-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+}
+
+.direct-dot { background-color: var(--primary-orange); }
+.indirect-dot { background-color: var(--accent-gold); }
+
+.impact-badge-text {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.direct-text { color: var(--primary-orange); }
+.indirect-text { color: var(--accent-dark-gold); }
+
+.impact-type-desc {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+
+/* 4. GLOBAL GOALS ALIGNMENT (SDGs) */
+.sdg-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .sdg-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .sdg-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sdg-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 28px 20px;
+  text-align: center;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.sdg-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-orange);
+}
+
+.sdg-icon-circle {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sdg-orange { background-color: #fdeee9; }
+.sdg-red { background-color: #fce8ea; }
+.sdg-green { background-color: #edf7eb; }
+.sdg-blue { background-color: #fce8f0; }
+
+.sdg-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.sdg-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* 5. TRANSPARENCY IN ACTION BANNER */
+.transparency-action-banner {
+  background-color: #fdede2;
+  border-radius: var(--radius-lg);
+  padding: 44px;
+  border: 1px solid #fed5be;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+@media (max-width: 860px) {
+  .transparency-action-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 20px;
+  }
+}
+
+.transparency-action-text h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.transparency-action-text p {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.report-downloads-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 280px;
+}
+
+@media (max-width: 860px) {
+  .report-downloads-col {
+    width: 100%;
+  }
+}
+
+.report-download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #fbd9c3;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all var(--transition-fast);
+}
+
+.report-download-btn:hover {
+  background-color: var(--primary-orange);
+  color: #ffffff;
+  border-color: var(--primary-orange);
+  transform: translateY(-2px);
+}
+
+/* 6. METHODOLOGY GRID */
+.impact-methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 860px) {
+  .impact-methodology-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+
+.impact-methodology-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.impact-methodology-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-orange);
+}
+
+.im-icon-box {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  background-color: var(--primary-light);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.im-card-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.im-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
