@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   Users, BarChart2, Handshake, CheckCircle2, 
-  ArrowRight, Shield, FileText, PieChart, Sparkles 
+  ArrowRight, Shield, FileText, PieChart, Sparkles , Heart
 } from 'lucide-react';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import { programsData, methodologyPillars, timelineMilestones } from '../data/programsData';
